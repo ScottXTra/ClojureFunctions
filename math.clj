@@ -1,10 +1,14 @@
 
 
+; Calculate circumference
 (defn circ [radius]
     (* radius 2 3.14159))
 
+; pow() equivilant
 (defn exp [x n]
   (reduce * (repeat n x)))
 
+; Should be accurate from 0 -> PI
 (defn taylorSin [radian]
-    (+(-radian(/(exp radian 3)6))(/(exp radian 5) 120)))  
+   (format "%.5f" (- (+ (- (+ (- radian (/ (exp radian 3) 6)) (/ (exp radian 5) 120)) (/ (exp radian 7) 5040)) (/ (exp radian 9) 362880) )  (/ (exp radian 11) 39916800) )))
+
