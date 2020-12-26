@@ -2,7 +2,7 @@
 
 ; Calculate circumference
 (defn circ [radius]
-    (* radius 2 3.14159))
+    (* radius 2 3.14159265359))
 
 ; pow() equivilant
 (defn exp [x n]
@@ -28,3 +28,11 @@
 ; Calculate area of a square with a given side legth
 (defn calcCubeVolume [sideLegth]
     (* sideLegth sideLegth))
+
+; Calculate volume of a sphere with a given radius
+(defn calcSphereVolume [radius]
+    (* (/ 4 3) 3.14159265359 (exp radius 3)))
+
+; Convert meters to freedom units
+(defn metersToFeet [meters]
+    (* meters 3.28084))
