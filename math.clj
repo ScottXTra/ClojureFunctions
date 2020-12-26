@@ -39,10 +39,10 @@
 
 ; calculate the intersections of lines in the y = mx + b format
 (defn lineIntersect [m1 b1 m2 b2]
-    (let [
-          m2-m1 (- m2 m1)
-          b1-b2 (- b1 b2)
-          devided (/ b1-b2 m2-m1)
-         ] [devided]
-))
+    (if (= m1 m2 ) "Lines are parallel" (let [
+        m2-m1 (- m2 m1)
+        b1-b2 (- b1 b2)
+        devided (/ b1-b2 m2-m1)
+        ] [devided])))
+
 
