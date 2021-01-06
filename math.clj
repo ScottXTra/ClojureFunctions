@@ -2,7 +2,7 @@
 
 ; Calculate circumference
 (defn circ [radius]
-    (* radius 2 3.14159265359))
+    (* radius 2 Math/PI))
 
 ; pow() equivilant
 (defn exp [x n]
@@ -31,13 +31,13 @@
 
 ; Calculate volume of a sphere with a given radius
 (defn calcSphereVolume [radius]
-    (* (/ 4 3) 3.14159265359 (exp radius 3)))
+    (* (/ 4 3) Math/PI (exp radius 3)))
 
 ; Convert meters to freedom units
 (defn metersToFeet [meters]
     (* meters 3.28084))
 
-; calculate the intersections of lines in the y = mx + b format
+; Calculate the intersections of lines in the y = mx + b format
 (defn lineIntersect [m1 b1 m2 b2]
     (if (= m1 m2 ) "Lines are parallel" (let [
         m2-m1 (- m2 m1)
@@ -45,4 +45,13 @@
         devided (/ b1-b2 m2-m1)
         ] [devided])))
 
+; Used to find delta between 0-360 angles
+(defn angleDifference [a1 a2]
+    (- 180 (Math/abs (- (Math/abs (- a1 a2)) 180))))
+    
+; Check if a number is prime
+(defn isPrime? [n]
+    (if (>= n 1)
+    (empty? (filter #(= 0 (mod n %)) (range 2 n)))
+    false))
 
