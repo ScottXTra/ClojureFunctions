@@ -8,4 +8,4 @@ Progress over Christmas break was slow between learning German, diving deeper in
 
 Progress will accelerate on Jan 10th -> Summer break to an unprecedented acquisition of a language of which I understood nothing a short time ago.
 
-Acquisition, understanding, and mastery of clojure will be integral to meet and exceed the expectations and requirements of working at VP.
+Acquisition, understanding, and mastery of clojure will be integral to meet and exceed the expectations and requirements of working at VP. So that is what must be, and will be achieved.
