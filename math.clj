@@ -26,7 +26,7 @@
     (* sideLegth sideLegth sideLegth))
 
 ; Calculate area of a square with a given side legth
-(defn calcCubeVolume [sideLegth]
+(defn calcSquareArea [sideLegth]
     (* sideLegth sideLegth))
 
 ; Calculate volume of a sphere with a given radius
