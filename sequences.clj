@@ -4,6 +4,6 @@
 (defn circ [radius]
     (* radius 2 Math/PI))
 
-
-(defn removeWordsWith3OrLessLetters [sentence]
-    )
+(require '[clojure.string :as str])
+(defn countWordsInSentence [sentence]
+    (count (str/split sentence #"\s+")))
