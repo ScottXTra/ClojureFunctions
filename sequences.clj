@@ -8,3 +8,5 @@
 ; returns a new list that is the input sequence with 1 added to every element
 (defn tripleEveryElement [sequence]
      (map inc sequence))
+
+(defn)
