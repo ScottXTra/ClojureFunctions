@@ -89,8 +89,4 @@
         delta2 (radians (- lon2 lon))
         y (* (Math/sin delta2) (Math/cos teta2))
         x (-(* (Math/cos teta1) (Math/sin teta2)) (* (Math/sin teta1) (Math/cos teta2) (Math/cos delta2)))
-        brng (degrees (Math/atan2 y x))
-        ][brng] 
-        ;
-    )
-)
+        ][(degrees (Math/atan2 y x))]))
