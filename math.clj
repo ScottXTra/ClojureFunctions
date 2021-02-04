@@ -71,3 +71,26 @@
     (or (zero? (mod x 2))
         (zero? (mod x 3))) false
     :else (test-prime x)))
+
+
+; degToRad
+(defn radians [degree]
+    (* Math/PI (/ degree 180 )))
+; radToDeg   
+(defn degrees [degree]
+    (* 180 (/ degree Math/PI)))
+
+; find bearing between 2 earth coordinants
+(defn bearing [lat lon lat2 lon2]
+    (let [
+        teta1 (radians lat)
+        teta2 (radians lat2)
+        delta1 (radians (- lat2 lat))                    
+        delta2 (radians (- lon2 lon))
+        y (* (Math/sin delta2) (Math/cos teta2))
+        x (-(* (Math/cos teta1) (Math/sin teta2)) (* (Math/sin teta1) (Math/cos teta2) (Math/cos delta2)))
+        brng (degrees (Math/atan2 y x))
+        ][brng] 
+        ;
+    )
+)

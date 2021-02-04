@@ -9,4 +9,3 @@
 (defn tripleEveryElement [sequence]
      (map inc sequence))
 
-(defn)
