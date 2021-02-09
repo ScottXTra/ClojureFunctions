@@ -9,3 +9,7 @@
 (defn tripleEveryElement [sequence]
      (map inc sequence))
 
+; returns a list of 10 random numbers between a and b
+(defn getNrndNumbersBetween [a b n]
+    (take n (repeatedly #(int (+ a (rand (- b a))))))
+)
