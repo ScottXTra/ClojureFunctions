@@ -1,0 +1,14 @@
+repeatedly => runs a funtion (param 1) infinte times
+
+take => takes the first n (param 1) items from a seq (param 2) 
+
+range => generate a seq from (param 1) to (param 2) with and optinal step of (param 3)
+
+iterate => applys function (param 1) to (param 2) repeatedly swaping in the result of (param 1) on (param 2) to be the new (param 2)
+
+repeat => returns an infinite seq of (param 1) [Offten used with "take"]
+
+cycle => returns a seq of (param 1) infinitly repeated [Offten used with "take"]
+
+interleave => returns a seq of elements of seq (param 1) and seq (param 2) alternating elements untill one seq runs out
+
