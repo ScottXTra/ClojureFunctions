@@ -14,5 +14,5 @@
     (take n (repeatedly #(int (+ a (rand (- b a))))))
 )
 
-(defn debug []
-    (range 1 10))
+(defn commaDelimit [delimeter seqOfStrings]
+    (interpose delimeter seqOfStrings))

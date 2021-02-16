@@ -12,3 +12,6 @@ cycle => returns a seq of (param 1) infinitly repeated [Offten used with "take"]
 
 interleave => returns a seq of elements of seq (param 1) and seq (param 2) alternating elements untill one seq runs out
 
+interpose => returns a seq of elements in seq (param 2) alternating elements with (param 1) 
+
+

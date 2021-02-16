@@ -43,7 +43,8 @@
         m2-m1 (- m2 m1)
         b1-b2 (- b1 b2)
         devided (/ b1-b2 m2-m1)
-        ] [devided])))
+        yPoint (+ b1 (* m1 devided ))
+        ] [devided yPoint])))
 
 ; Used to find delta between 0-360 angles
 (defn angleDifference [a1 a2]
