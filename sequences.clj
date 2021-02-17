@@ -17,3 +17,10 @@
 (defn commaDelimit [seqOfStrings]
     (interpose "," seqOfStrings))
 
+
+(def english-alphabet
+  (seq "abcdefghijklmnopqrstuvwxyz"))
+  
+(defn rot13 [alphabet text]
+  (let [cipher (->> (cycle alphabet)(drop 13)(take 26)(zipmap alphabet))]
+    (apply str (replace cipher text))))
