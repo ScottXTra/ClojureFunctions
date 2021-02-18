@@ -24,3 +24,16 @@
 (defn rot13 [alphabet text]
   (let [cipher (->> (cycle alphabet)(drop 13)(take 26)(zipmap alphabet))]
     (apply str (replace cipher text))))
+
+
+
+; apperently some interveiwers use this as a challange to check if you can code
+
+(defn fizzbuzz []
+(doseq [x (range 1 101)] 
+      (def word (str (when (zero? (mod x 3)) "fizz") (when (zero? (mod x 5)) "buzz")))
+      (println (if (empty? word) x word ))
+))
+
+
+  
