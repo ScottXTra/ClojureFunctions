@@ -14,4 +14,5 @@ interleave => returns a seq of elements of seq (param 1) and seq (param 2) alter
 
 interpose => returns a seq of elements in seq (param 2) alternating elements with (param 1) 
 
+when => format (when (condition) returnSeq) basicly just if I guess?????
 

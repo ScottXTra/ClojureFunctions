@@ -17,7 +17,7 @@
 (defn commaDelimit [seqOfStrings]
     (interpose "," seqOfStrings))
 
-
+; borrowed from the internet but now I understand it after 30 minuites of reading 
 (def english-alphabet
   (seq "abcdefghijklmnopqrstuvwxyz"))
   
@@ -37,5 +37,37 @@
 
 ; this leet code problem https://leetcode.com/problems/find-the-duplicate-number/
 
+; I also coded it in asembler to assert dominance
+; https://leetcode.com/problems/find-the-duplicate-number/discuss/1058222/x64asm-the-way-god-intended-(cycle-method)
+
+;int findDuplicate(int* nums, int numsSize){
+;   __asm("movl    (%rdi), %ecx\n"
+;       " movl    %ecx, %eax\n"
+;        "movl    %ecx, %edx");
+;    __asm("LBB0_1:");    
+;    
+;    __asm("movslq  %eax, %rax\n"
+;        "movl    (%rdi,%rax,4), %eax\n"
+;        "movslq  %edx, %rdx\n"
+;        "movslq  (%rdi,%rdx,4), %rdx\n"
+;        "movl    (%rdi,%rdx,4), %edx\n"
+;        "cmpl    %edx, %eax\n"
+;        "jne     LBB0_1\n"
+;        "cmpl    %eax, %ecx\n"
+;        "jne     LBB0_2\n"
+;        "movl    %ecx, %eax\n"
+;        "jp END");
+;    __asm("LBB0_2:");  
+;    __asm("movslq  %ecx, %rcx\n"
+;        "movl    (%rdi,%rcx,4), %ecx\n"
+;        "movslq  %eax, %rax\n"
+;        "movl    (%rdi,%rax,4), %eax\n"
+;        "cmpl    %eax, %ecx\n"
+;        "jne     LBB0_2\n"
+;        "jp END");
+;     __asm("END:"); 
+;    return ;
+    
+; even works with multiple duplicates which is more than the problem posed
 (defn findDuplicate [numbers] (map key (remove (comp #{1} val) (frequencies numbers))))
   
