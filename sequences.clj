@@ -35,5 +35,7 @@
       (println (if (empty? word) x word ))
 ))
 
+; this leet code problem https://leetcode.com/problems/find-the-duplicate-number/
 
+(defn findDuplicate [numbers] (map key (remove (comp #{1} val) (frequencies numbers))))
   
