@@ -81,3 +81,7 @@
 (defn findNumbers [seqi] 
   (count (filter even-dig? seqi))  
 )
+; This language feels like cheating somtimes 
+; https://leetcode.com/problems/reverse-string/
+; (reverse s)
+(defn r [s] (reverse s))
