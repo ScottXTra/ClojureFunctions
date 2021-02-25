@@ -16,3 +16,6 @@ interpose => returns a seq of elements in seq (param 2) alternating elements wit
 
 when => format (when (condition) returnSeq) basicly just if I guess?????
 
+deseq (powerfull af) => example (doseq [x (seq)] (do operations on seq, x is each value in seq) )
+
+filter => returns a seq of every item in a seq list that returned true when passed to the predicate. example: (filter even? '(1,2,3,3,4,5,6)) returns (2 4 6)

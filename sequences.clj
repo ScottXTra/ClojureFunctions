@@ -70,4 +70,14 @@
     
 ; even works with multiple duplicates which is more than the problem posed
 (defn findDuplicate [numbers] (map key (remove (comp #{1} val) (frequencies numbers))))
+
+; https://leetcode.com/problems/majority-element/
+(defn majority [seqi] (first (apply max-key val(frequencies seqi))))
   
+; https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+; nowhere neer the best way but this question was really boring and I wanted to get it done 
+(defn even-dig? [number]
+  (zero? (mod (count (str number)) 2)))
+(defn findNumbers [seqi] 
+  (count (filter even-dig? seqi))  
+)
