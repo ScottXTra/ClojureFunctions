@@ -84,4 +84,8 @@
 ; This language feels like cheating somtimes 
 ; https://leetcode.com/problems/reverse-string/
 ; (reverse s)
-(defn r [s] (reverse s))
+(defn reverseString [s] (reverse s))
+
+; update t
+; https://leetcode.com/problems/shuffle-string/
+(defn restoreString [string indices](vals (into (sorted-map)(zipmap  indices string))))
