@@ -88,4 +88,13 @@
 
 ; update t
 ; https://leetcode.com/problems/shuffle-string/
-(defn restoreString [string indices](vals (into (sorted-map)(zipmap  indices string))))
+(defn restoreString [string indices]
+  (vals (into (sorted-map)(zipmap  indices string))))
+
+; Dave's
+(defn restoreStringDaves  [string indices]
+  (map second (sort (zipmap indices string))))
+
+; https://leetcode.com/problems/peak-index-in-a-mountain-array/submissions/
+(defn peakIndexInMountainArray [a]
+  (.indexOf a (apply max a)))
