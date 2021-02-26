@@ -91,3 +91,7 @@
         y (* (Math/sin delta2) (Math/cos teta2))
         x (-(* (Math/cos teta1) (Math/sin teta2)) (* (Math/sin teta1) (Math/cos teta2) (Math/cos delta2)))
         ][(degrees (Math/atan2 y x))]))
+
+; Challange to code a function that returns number 1-100 without using number in the code 
+(defn OneToOnehundredWithoutNumbers []
+    (range (count ".") (+(* (count "..........") (count "..........")) (count "."))))
