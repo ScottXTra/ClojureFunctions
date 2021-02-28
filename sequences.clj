@@ -98,3 +98,8 @@
 ; https://leetcode.com/problems/peak-index-in-a-mountain-array/submissions/
 (defn peakIndexInMountainArray [a]
   (.indexOf a (apply max a)))
+  
+; https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/
+(defn canBeEqual? [t a]
+  (= (sort t) (sort a)))
+
