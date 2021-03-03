@@ -11,3 +11,13 @@
     (if (= num 0) 0 (+ 1 (mod (- num 1) 9))))
 
 
+
+(def fibonacci(->> [0 1] 
+    (iterate (fn [[a b]] [b (+ a b)]))(map first)))
+
+(defn fib [n]
+    (nth fibonacci n))
+
+;; example of split-with
+(defn splitter [seqi]
+    (split-with #(< % 10) seqi)) 

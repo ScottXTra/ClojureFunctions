@@ -19,3 +19,13 @@ when => format (when (condition) returnSeq) basicly just if I guess?????
 deseq (powerfull af) => example (doseq [x (seq)] (do operations on seq, x is each value in seq) )
 
 filter => returns a seq of every item in a seq list that returned true when passed to the predicate. example: (filter even? '(1,2,3,3,4,5,6)) returns (2 4 6)
+
+take-while => takes all items from a seq up to the point where the pred funtion returns false for the first time and returns them in a seq
+
+drop-while => drops all items from a seq up to the point where the pred funtion returns false for the first time and returns them in a seq
+
+split-at => splits a seq into 2 new lazy-seqs at a given index. example (split-at 5 (range 10)) => [(0 1 2 3 4) (5 6 7 8 9)]
+
+every? => check to see if the pred function returns true for every item in the list if so return true if not reuturn false
+
+some => check to see if the pred function returns true for some of the items in the list if so return true if not return false. (retunrs the first item that causes a true return fro mthe pred)
