@@ -103,3 +103,6 @@
 (defn canBeEqual? [t a]
   (= (sort t) (sort a)))
 
+; https://leetcode.com/problems/valid-anagram/
+(defn isAnagram? [s t]
+  (= (sort s) (sort t)))
