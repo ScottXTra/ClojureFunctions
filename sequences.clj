@@ -106,3 +106,10 @@
 ; https://leetcode.com/problems/valid-anagram/
 (defn isAnagram? [s t]
   (= (sort s) (sort t)))
+
+; https://leetcode.com/problems/move-zeroes/  (kinda not correct bc clojure data is emutable)
+(defn moveZeroes [nums]
+    (let [
+        zr (remove #(zero? %) nums)
+        z  (take (- (count nums) (count zr)) (repeat 0))
+    ][(concat zr z)]))
