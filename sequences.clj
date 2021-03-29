@@ -113,3 +113,13 @@
         zr (remove #(zero? %) nums)
         z  (take (- (count nums) (count zr)) (repeat 0))
     ][(concat zr z)]))
+
+
+
+(use 'clojure.data)
+(def not-even? (complement even?))
+
+; https://leetcode.com/problems/find-the-difference/
+(defn findTheDifference [s t]
+  (map key (remove #(-> % val even?) (frequencies (concat s t))))
+)
