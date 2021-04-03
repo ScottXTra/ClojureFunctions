@@ -123,3 +123,19 @@
 (defn findTheDifference [s t]
   (map key (remove #(-> % val even?) (frequencies (concat s t))))
 )
+
+
+
+(defn mergeAlternately [word1 word2]
+  ;(let [
+       ;w 
+       (interleave word1 (conj word2 nil)))
+       
+        ;(interpose (concat (seq word1) (repeat (count word2) nil)) word2)
+      ; ][
+         ;
+      ;   ]) 
+  
+    
+  
+)

@@ -29,3 +29,5 @@ split-at => splits a seq into 2 new lazy-seqs at a given index. example (split-a
 every? => check to see if the pred function returns true for every item in the list if so return true if not reuturn false
 
 some => check to see if the pred function returns true for some of the items in the list if so return true if not return false. (retunrs the first item that causes a true return fro mthe pred)
+
+map => returns a new collection with the pred apllyed to every element. example (map inc '(1 2 3 4 5 6)) => (2 3 4 5 6 7)

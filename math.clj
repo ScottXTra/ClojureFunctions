@@ -95,3 +95,36 @@
 ; Challange to code a function that returns number 1-100 without using number in the code 
 (defn OneToOnehundredWithoutNumbers []
     (range (count ".") (+(* (count "..........") (count "..........")) (count "."))))
+
+; calculate the pitch and yaw you would have to assume to go from one point in 3D space to anouther 
+
+;          +Y
+;           |
+;           |               
+;           |              +Z (0/359 deg yaw)
+;           |            /
+;           |        / 
+;           |    /    
+;           | /
+;              \
+;                  \
+;                     \
+;                        \ +X (90 deg yaw)
+
+; 2d distance calculation
+(defn twoDimDistance [deltaX deltaZ]
+   (Math/sqrt (+ (Math/pow deltaX 2) (Math/pow deltaZ 2))))
+
+; 3D trajectory pitch and yaw
+; returns [yaw pitch]
+(defn calcTraj [x1 y1 z1 x2 y2 z2]
+    (let [
+        deltaX (- x2 x1)
+        deltaY (- y2 y1)
+        deltaZ (- z2 z1)
+        yawRad (Math/atan2 deltaX deltaZ)
+        yawDegrees (degrees yawRad)
+        pitchRad (Math/atan2 deltaY (twoDimDistance deltaX deltaZ))
+        pitchDegrees (degrees pitchRad)
+        ][yawDegrees pitchDegrees])
+)
